@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modaal Venster</title>
+    <meta name="Author" content="Denzel" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="thumbnails">
+            <img src="venster1.jpg" alt="yolo" id="thumb1">
+            <img src="venster2.png" alt="yolo" id="thumb2">
+            <img src="venster3.jpg" alt="yolo" id="thumb3">
+        </div>
+
+
+
+
+        <div id="overlay">
+        </div>
+        <div id="venster1">
+            <div class="foto">
+                <img src="venster1.jpg" alt="yolo" id="foto1">
+            </div>
+            <h3>Pizza is forever</h3>
+            <div class="close">close</div>
+        </div>
+        <div id="venster2">
+            <div class="foto">
+                <img src="venster2.png" alt="yolo" id="foto2">
+            </div>
+            <h3>Life was ok</h3>
+            <div class="close">close</div>
+        </div>
+        <div id="venster3">
+            <div class="foto">
+                <img src="venster3.jpg" alt="yolo" id="foto3">
+            </div>
+            <h3>Een beer</h3>
+            <div class="close">close</div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () { //wanneer het document geladen is word het script geladen.
+
+            $("#foto1").unload();
+            $("#foto2").unload();
+            $("#foto3").unload();
+
+            $("#thumb1").click(function () { //wanneer dr op een thumb geklikt word
+                $("#foto1").load();
+                $("#overlay").fadeIn("slow"); //fadein van overlay en het venster.
+                $("#venster1").fadeIn("slow");
+            })
+
+            $(".close").click(function () { //als er op mn close knop geklikt word fade alles uit (alles wat zichtbaar was)
+                $("#overlay").fadeOut("slow");
+                $("#venster1").fadeOut("slow");
+                $("#venster2").fadeOut("slow");
+                $("#venster3").fadeOut("slow");
+                $("#foto1").unload();
+                $("#foto2").unload();
+                $("#foto3").unload();
+            })
+
+            $("#overlay").click(function () {
+                $("#overlay").fadeOut("slow");
+                $("#venster1").fadeOut("slow");
+                $("#venster2").fadeOut("slow");
+                $("#venster3").fadeOut("slow");
+                $("#foto1").unload();
+                $("#foto2").unload();
+                $("#foto3").unload();
+            })
+
+
+
+            $("#thumb2").click(function () {
+                $("#foto2").load();
+                $("#overlay").fadeIn("slow");
+                $("#venster2").fadeIn("slow");
+            })
+
+            $("#thumb3").click(function () {
+                $("#foto3").load();
+                $("#overlay").fadeIn("slow");
+                $("#venster3").fadeIn("slow");
+            })
+        })
+    </script>
+</body>
+
+
+</html>

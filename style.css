@@ -1,0 +1,51 @@
+body {}
+
+.thumbnails {
+    height: 200px;
+}
+
+.thumbnails img {
+    width: 200px;
+    object-fit: contain;
+}
+
+#overlay {
+    background-color: #000;
+    opacity: 0.7;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+
+#venster1,
+#venster2,
+#venster3 {
+    background-color: #fff;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    box-shadow: 0 0 50px #000;
+    display: none;
+}
+
+.foto {
+    width: 300px;
+    margin: auto;
+}
+
+.foto img {
+    width: 300px;
+    margin: auto;
+}
+
+.close {
+    cursor: pointer;
+    color: #0000FF;
+    font-weight: bold;
+}
